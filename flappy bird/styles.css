@@ -1,0 +1,120 @@
+body {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9),
+    url("https://i.postimg.cc/xCK1Y8vW/background.jpg") no-repeat center center
+      fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background: url("https://i.postimg.cc/xCK1Y8vW/background.jpg") no-repeat
+    center center;
+  background-size: cover;
+  overflow: hidden;
+  border: 15px solid transparent;
+  border-image: repeating-linear-gradient(
+      45deg,
+      #3498db 0,
+      #3498db 10px,
+      #2980b9 10px,
+      #2980b9 20px
+    )
+    15;
+  box-sizing: border-box;
+}
+
+#bird {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 200px;
+  left: 100px;
+  z-index: 3;
+  user-select: none;
+  pointer-events: none;
+}
+
+.pipe {
+  position: absolute;
+  width: 60px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.pipe-top {
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.pipe-bottom {
+  bottom: 0;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+  z-index: 4;
+  user-select: none;
+}
+
+#start-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 5;
+  user-select: none;
+}
+
+#game-over-dialog {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+#game-over-dialog h2 {
+  margin-bottom: 10px;
+}
+
+#game-over-dialog button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#game-over-dialog button:hover {
+  background-color: #0056b3;
+}
